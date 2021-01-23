@@ -1,6 +1,6 @@
-package main 
+package main
 
-type UserID int
+type UserID float64
 
 func main() {
 	idx := 1
@@ -11,6 +11,6 @@ func main() {
 	// myID := idx
 
 	myID := UserID(idx)
-	
+
 	println(uid, myID)
 }

@@ -9,6 +9,14 @@ func main() {
 		"lastName": "Romanov",
 	}
 
+	var hero map[string]string = map[string]string{
+		"name": "teemo",
+		"class": "mage",
+	}
+
+	class, classExists := hero["class"]
+	fmt.Println("class ",class, "class Exists: ", classExists)
+
 	// сразу с нужной ёмкостью
 	profile := make(map[string]string, 10)
 

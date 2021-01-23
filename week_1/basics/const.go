@@ -9,10 +9,12 @@ const (
 )
 const (
 	zero = iota
-	_    // пустая переменная, пропуск iota
+	one = (1 << iota)  // пустая переменная, пропуск iota
 	two
 	three // = 3
 )
+
+
 const (
 	_         = iota             // пропускаем первое значение
 	KB uint64 = 1 << (10 * iota) // 1 << (10 * 1) = 1024
@@ -28,7 +30,7 @@ const (
 func main() {
 	var month int32 = 13
 	fmt.Println(month + year)
-
+	fmt.Println(zero, one, two, three)
 	// month + yearTyped (mismatched types int32 and int)
 	// fmt.Println( month + yearTyped )
 }

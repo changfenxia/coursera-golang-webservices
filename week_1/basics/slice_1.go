@@ -24,7 +24,8 @@ func main() {
 
 	// добавление элементов
 	var buf []int            // len=0, cap=0
-	buf = append(buf, 9, 10) // len=2, cap=2
+	buf = append(buf, 9, 10, 11, 12, 12, 13,) // len=2, cap=2
+	fmt.Println(buf)
 	buf = append(buf, 12)    // len=3, cap=4
 
 	// добавление друго слайса

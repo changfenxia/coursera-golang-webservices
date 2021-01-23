@@ -40,4 +40,15 @@ func main() {
 	ints := []int{1, 2, 3, 4}
 	copy(ints[1:3], []int{5, 6}) // ints = [1, 5, 6, 4]
 	fmt.Println(ints)
+
+	mySlice := []int{1, 2, 3, 666}
+	newSliccce := mySlice[2:]
+	newSliccce[0] = 42
+	newSliccce = append(newSliccce, []int{7, 8, 9}...)
+	
+	//lets try and copy
+	//wrong way to copy
+	mySlice = make([]int, len(newSliccce), len(newSliccce))
+	copy(mySlice, newSliccce)
+	fmt.Println(mySlice)
 }
